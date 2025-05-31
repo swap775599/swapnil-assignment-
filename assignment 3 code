@@ -1,0 +1,123 @@
+// SnakeBallGame.java
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.LinkedList;
+import java.util.Random;
+
+public class SnakeBallGame extends JPanel implements ActionListener, KeyListener {
+    private final int WIDTH = 500, HEIGHT = 500, UNIT = 20;
+    private LinkedList<Point> snake = new LinkedList<>();
+    private Point ball;
+    private char direction = 'R';
+    private Timer timer;
+    private boolean gameOver = false;
+
+    public SnakeBallGame() {
+        setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        setBackground(Color.BLACK);
+        setFocusable(true);
+        addKeyListener(this);
+        startGame();
+    }
+
+    public void startGame() {
+        snake.clear();
+        snake.add(new Point(UNIT * 5, UNIT * 5));
+        spawnBall();
+        timer = new Timer(150, this);
+        timer.start();
+    }
+
+    public void spawnBall() {
+        Random rand = new Random();
+        int x = rand.nextInt(WIDTH / UNIT) * UNIT;
+        int y = rand.nextInt(HEIGHT / UNIT) * UNIT;
+        ball = new Point(x, y);
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        g.setColor(Color.GREEN);
+        for (Point p : snake) {
+            g.fillRect(p.x, p.y, UNIT, UNIT);
+        }
+
+        g.setColor(Color.RED);
+        g.fillOval(ball.x, ball.y, UNIT, UNIT);
+
+        if (gameOver) {
+            g.setColor(Color.WHITE);
+            g.setFont(new Font("Arial", Font.BOLD, 36));
+            g.drawString("Game Over", WIDTH / 3, HEIGHT / 2);
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (!gameOver) {
+            move();
+            checkCollision();
+            repaint();
+        }
+    }
+
+    public void move() {
+        Point head = new Point(snake.getFirst());
+        switch (direction) {
+            case 'U': head.y -= UNIT; break;
+            case 'D': head.y += UNIT; break;
+            case 'L': head.x -= UNIT; break;
+            case 'R': head.x += UNIT; break;
+        }
+        snake.addFirst(head);
+
+        if (head.equals(ball)) {
+            spawnBall();
+        } else {
+            snake.removeLast();
+        }
+    }
+
+    public void checkCollision() {
+        Point head = snake.getFirst();
+
+        // Wall collision
+        if (head.x < 0 || head.y < 0 || head.x >= WIDTH || head.y >= HEIGHT) {
+            gameOver = true;
+            timer.stop();
+        }
+
+        // Self collision
+        for (int i = 1; i < snake.size(); i++) {
+            if (head.equals(snake.get(i))) {
+                gameOver = true;
+                timer.stop();
+            }
+        }
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_UP: if (direction != 'D') direction = 'U'; break;
+            case KeyEvent.VK_DOWN: if (direction != 'U') direction = 'D'; break;
+            case KeyEvent.VK_LEFT: if (direction != 'R') direction = 'L'; break;
+            case KeyEvent.VK_RIGHT: if (direction != 'L') direction = 'R'; break;
+        }
+    }
+
+    @Override public void keyReleased(KeyEvent e) {}
+    @Override public void keyTyped(KeyEvent e) {}
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Simple Snake Ball Game");
+        SnakeBallGame game = new SnakeBallGame();
+        frame.add(game);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
