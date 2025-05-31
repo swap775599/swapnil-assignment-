@@ -1,0 +1,93 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
+
+public class FallingRainGrid extends JPanel implements ActionListener {
+
+    private static final int ROWS = 15;
+    private static final int COLS = 20;
+    private static final int CELL_SIZE = 30;
+    private static final int WIDTH = COLS * CELL_SIZE;
+    private static final int HEIGHT = ROWS * CELL_SIZE;
+    private static final int TIMER_DELAY = 100;
+
+    private final java.util.List<RainDrop> drops = new ArrayList<>();
+    private final Random rand = new Random();
+    private final javax.swing.Timer timer;
+
+    public FallingRainGrid() {
+        setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        setBackground(Color.BLACK);
+        timer = new javax.swing.Timer(TIMER_DELAY, this);
+        timer.start();
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        // Draw grid
+        g.setColor(Color.DARK_GRAY);
+        for (int x = 0; x <= WIDTH; x += CELL_SIZE) {
+            g.drawLine(x, 0, x, HEIGHT);
+        }
+        for (int y = 0; y <= HEIGHT; y += CELL_SIZE) {
+            g.drawLine(0, y, WIDTH, y);
+        }
+
+        // Draw raindrops
+        for (RainDrop drop : drops) {
+            g.setColor(drop.color);
+            g.fillOval(drop.col * CELL_SIZE + CELL_SIZE / 4,
+                       drop.row * CELL_SIZE + CELL_SIZE / 4,
+                       CELL_SIZE / 2, CELL_SIZE / 2);
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // Move drops down
+        Iterator<RainDrop> iter = drops.iterator();
+        while (iter.hasNext()) {
+            RainDrop drop = iter.next();
+            drop.row++;
+            if (drop.row >= ROWS) iter.remove();
+        }
+
+        // Add new random drop
+        if (rand.nextDouble() < 0.6) {
+            int col = rand.nextInt(COLS);
+            Color color = new Color(rand.nextFloat(), rand.nextFloat(), rand.nextFloat());
+            drops.add(new RainDrop(col, 0, color));
+        }
+
+        repaint();
+    }
+
+    private static class RainDrop {
+        int col;
+        int row;
+        Color color;
+
+        public RainDrop(int col, int row, Color color) {
+            this.col = col;
+            this.row = row;
+            this.color = color;
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Falling Rain Grid - Java Swing");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setContentPane(new FallingRainGrid());
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        });
+    }
+}
