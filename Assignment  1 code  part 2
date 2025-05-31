@@ -1,0 +1,363 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Battlefield Server Info
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+    body {
+      font-family: "Orbitron", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="relative min-h-screen bg-gradient-to-r from-[#0a0f14] to-[#1a2a35] text-white">
+  <div class="flex flex-col max-w-[1200px] mx-auto px-6 py-10">
+   <!-- Breadcrumb -->
+   <div class="flex items-center space-x-2 text-xs font-semibold uppercase text-gray-300 mb-3 select-none">
+    <i class="fas fa-chevron-left">
+    </i>
+    <span>
+     MULTIPLAYER
+    </span>
+    <span>
+     /
+    </span>
+    <span class="font-bold">
+     SERVER BROWSER
+    </span>
+    <span>
+     /
+    </span>
+   </div>
+   <!-- Title -->
+   <h1 class="text-3xl font-extrabold tracking-wide mb-10">
+    SERVER INFO
+   </h1>
+   <!-- Server Info Section -->
+   <div class="flex flex-col max-w-4xl space-y-6">
+    <!-- Server Header -->
+    <div>
+     <h2 class="text-xl font-extrabold tracking-wide mb-2">
+      ! RC3-BASEMAPS
+     </h2>
+     <div class="flex items-center space-x-2 mb-1">
+      <img alt="United States flag icon" class="w-[20px] h-[14px]" height="14" src="https://storage.googleapis.com/a1aa/image/8e22a3c6-f9ec-47fb-4ae5-4d5c6649714d.jpg" width="20"/>
+      <span class="text-xs font-semibold uppercase tracking-widest text-gray-300">
+       CONQUEST LARGE - LANCANG DAM - CUSTOM - 60 HZ
+      </span>
+     </div>
+     <p class="text-[9px] font-semibold text-gray-300 max-w-[600px]">
+      Server protected by The_K-50 AntiCheat. Vip !Rules, Questions, Request, Appeal, Visit us:
+      <a class="underline text-gray-300 hover:text-white" href="https://www.epg.gg" target="_blank">
+       www.epg.gg
+      </a>
+      | Discord
+          https://discord.gg/3r5NK4d
+     </p>
+    </div>
+    <!-- Buttons -->
+    <div class="flex space-x-2 max-w-[600px]">
+     <button class="flex-1 border border-gray-600 text-xs font-semibold uppercase tracking-widest py-2 hover:border-white transition-colors">
+      JOIN
+     </button>
+     <button class="flex-1 border border-gray-600 text-xs font-semibold uppercase tracking-widest py-2 hover:border-white transition-colors">
+      SPECTATE
+     </button>
+     <button class="flex-1 border border-gray-600 text-xs font-semibold uppercase tracking-widest py-2 hover:border-white transition-colors">
+      JOIN AS COMMANDER
+     </button>
+     <button class="flex-none border border-gray-600 text-xs font-semibold uppercase tracking-widest py-2 flex items-center justify-center space-x-1 hover:border-white transition-colors">
+      <i class="fas fa-star">
+      </i>
+      <span>
+       13672
+      </span>
+     </button>
+    </div>
+    <!-- Players, Ping, Tickrate -->
+    <div class="flex max-w-[600px] mt-4 mb-6">
+     <div class="flex-1">
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-300">
+       PLAYERS
+      </p>
+      <p class="text-lg font-bold tracking-wide">
+       60/64
+      </p>
+     </div>
+     <div class="flex-1">
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-300">
+       PING
+      </p>
+      <p class="text-lg font-bold tracking-wide">
+       104ms
+      </p>
+     </div>
+     <div class="flex-1">
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-300">
+       TICKRATE
+      </p>
+      <p class="text-lg font-bold tracking-wide">
+       60 Hz
+      </p>
+     </div>
+    </div>
+    <!-- Settings, Advanced, Rules Columns -->
+    <div class="flex max-w-[600px] space-x-10 border-l border-gray-400 pl-6">
+     <!-- Settings -->
+     <div class="flex flex-col space-y-2 text-xs font-semibold uppercase tracking-widest text-gray-300 min-w-[120px]">
+      <span>
+       SETTINGS
+      </span>
+      <div class="flex justify-between">
+       <span>
+        REGION
+       </span>
+       <span class="text-white">
+        EUROPE - DE
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        PUNKBUSTER
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        FAIRFIGHT
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        PASSWORD
+       </span>
+       <span class="text-gray-400">
+        OFF
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        PRESET
+       </span>
+       <span class="text-white">
+        NORMAL
+       </span>
+      </div>
+     </div>
+     <!-- Advanced -->
+     <div class="flex flex-col space-y-2 text-xs font-semibold uppercase tracking-widest text-gray-300 min-w-[180px]">
+      <span>
+       ADVANCED
+      </span>
+      <div class="flex justify-between">
+       <span>
+        MINIMAP
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        ONLY SQUAD LEADER SPAWN
+       </span>
+       <span class="text-gray-400">
+        OFF
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        VEHICLES
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        TEAM BALANCE
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        MINIMAP SPOTTING
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        HUD
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        3P VEHICLE CAM
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        REGENERATIVE HEALTH
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        KILL CAM
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        FRIENDLY FIRE
+       </span>
+       <span class="text-gray-400">
+        OFF
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        3D SPOTTING
+       </span>
+       <span class="text-white">
+        ON
+       </span>
+      </div>
+     </div>
+     <!-- Rules -->
+     <div class="flex flex-col space-y-2 text-xs font-semibold uppercase tracking-widest text-gray-300 min-w-[180px]">
+      <span>
+       RULES
+      </span>
+      <div class="flex justify-between">
+       <span>
+        TICKETS
+       </span>
+       <span class="text-yellow-400">
+        400
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        VEHICLE SPAWN DELAY
+       </span>
+       <span class="text-yellow-400">
+        25
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        BULLET DAMAGE
+       </span>
+       <span class="text-white">
+        100
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        KICK AFTER TEAM KILLS
+       </span>
+       <span class="text-white">
+        5
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        PLAYER HEALTH
+       </span>
+       <span class="text-white">
+        100
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        PLAYER RESPAWN TIME
+       </span>
+       <span class="text-white">
+        100
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        KICK AFTER IDLE
+       </span>
+       <span class="text-white">
+        300
+       </span>
+      </div>
+      <div class="flex justify-between">
+       <span>
+        BAN AFTER KICKS
+       </span>
+       <span class="text-white">
+        3
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Left vertical icons -->
+   <div class="fixed top-[100px] left-0 flex flex-col space-y-3 px-2">
+    <img alt="Player 1 avatar image with purple and blue colors" class="w-10 h-10 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/e71d4cd2-cde8-4a99-87f7-6c7fceea2934.jpg" width="40"/>
+    <img alt="Player 2 avatar image with brown and orange colors" class="w-10 h-10 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/148023ee-bb98-4d5a-c6ad-70c5c1ec7c52.jpg" width="40"/>
+    <img alt="Player 3 avatar image with blue and orange colors" class="w-10 h-10 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/9b8bb10a-a753-41b8-2ba9-095d400d9d89.jpg" width="40"/>
+    <img alt="Player 4 avatar image with brown and green colors" class="w-10 h-10 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/97745ebc-2e2c-4a53-e26a-9b6b1f2bcd52.jpg" width="40"/>
+    <img alt="Player 5 avatar image with dark blue and black colors" class="w-10 h-10 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/cd9a4711-f102-43f1-0dd4-77755c45d291.jpg" width="40"/>
+    <button aria-label="Play button" class="w-10 h-10 bg-gray-600 hover:bg-gray-700 flex items-center justify-center cursor-pointer">
+     <i class="fas fa-play text-white">
+     </i>
+    </button>
+    <button aria-label="Menu button" class="w-10 h-10 bg-gray-600 hover:bg-gray-700 flex items-center justify-center cursor-pointer">
+     <i class="fas fa-bars text-white">
+     </i>
+    </button>
+   </div>
+   <!-- Right vertical icons -->
+   <div class="fixed top-[100px] right-0 flex flex-col space-y-6 px-2">
+    <button aria-label="Team icon" class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center cursor-pointer rounded">
+     <i class="fas fa-users text-white text-sm">
+     </i>
+    </button>
+    <button aria-label="Plus icon" class="w-8 h-8 bg-gray-700 hover:bg-gray-600 flex items-center justify-center cursor-pointer rounded">
+     <i class="fas fa-plus text-white text-sm">
+     </i>
+    </button>
+    <div class="flex flex-col space-y-4">
+     <button aria-label="Selected player avatar" class="border-l-4 border-green-500 pl-1">
+      <img alt="Player avatar with green border highlight" class="w-10 h-10 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/04b07ddc-5def-4618-2f6e-3882deecbbd7.jpg" width="40"/>
+     </button>
+     <button aria-label="Player avatar 2" class="opacity-50">
+      <img alt="Player avatar with blue and gray colors" class="w-10 h-10 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/84ea8f89-0818-4a86-e26a-384b9cfdad77.jpg" width="40"/>
+     </button>
+     <button aria-label="Player avatar 3" class="opacity-50">
+      <img alt="Player avatar with blue and gray colors" class="w-10 h-10 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/84ea8f89-0818-4a86-e26a-384b9cfdad77.jpg" width="40"/>
+     </button>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
