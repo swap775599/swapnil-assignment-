@@ -1,0 +1,254 @@
+//1st Html file 
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Server Info - Battlefield
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+    body {
+      font-family: 'Orbitron', monospace;
+    }
+    /* Scrollbar styling for the map rotation container */
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 8px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: #a3a3a3;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-[#0f1a23] to-[#1f2a35] min-h-screen text-white relative overflow-hidden">
+  <div class="flex h-screen">
+   <!-- Left vertical nav -->
+   <nav class="flex flex-col items-center space-y-6 py-6 px-2 bg-transparent w-14">
+    <button class="text-white opacity-80 hover:opacity-100 transition">
+     <i class="fas fa-arrow-left fa-lg">
+     </i>
+    </button>
+    <div class="flex flex-col space-y-4 mt-4">
+     <img alt="User avatar 1, pixel art style" class="rounded-sm cursor-pointer hover:opacity-80" height="32" src="https://storage.googleapis.com/a1aa/image/84fd62d6-c9e9-43fd-6251-a8a4de962dea.jpg" width="32"/>
+     <img alt="User avatar 2, pixel art style" class="rounded-sm cursor-pointer hover:opacity-80" height="32" src="https://storage.googleapis.com/a1aa/image/6b8e3fa9-d66f-40d6-e14c-963312337722.jpg" width="32"/>
+     <img alt="User avatar 3, pixel art style" class="rounded-sm cursor-pointer hover:opacity-80" height="32" src="https://storage.googleapis.com/a1aa/image/4369c9c7-cab8-4940-ec87-7f5defca374d.jpg" width="32"/>
+     <img alt="User avatar 4, pixel art style" class="rounded-sm cursor-pointer hover:opacity-80" height="32" src="https://storage.googleapis.com/a1aa/image/79702d03-319e-4189-d4a5-3f55d3c88cab.jpg" width="32"/>
+     <img alt="User avatar 5, pixel art style" class="rounded-sm cursor-pointer hover:opacity-80" height="32" src="https://storage.googleapis.com/a1aa/image/ac7883c9-2380-4b1a-4f26-a57559d21d41.jpg" width="32"/>
+    </div>
+    <button class="mt-6 text-white opacity-80 hover:opacity-100 transition">
+     <i class="fas fa-play fa-lg">
+     </i>
+    </button>
+    <button class="mt-4 text-white opacity-80 hover:opacity-100 transition">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+    <button class="mt-4 text-white opacity-80 hover:opacity-100 transition">
+     <i class="fas fa-list fa-lg">
+     </i>
+    </button>
+    <div class="mt-auto mb-6 text-white opacity-50 hover:opacity-80 cursor-pointer">
+     <i class="fas fa-question-circle fa-lg">
+     </i>
+    </div>
+    <div class="mb-6 text-white opacity-50 hover:opacity-80 cursor-pointer">
+     <i class="fas fa-power-off fa-lg">
+     </i>
+    </div>
+   </nav>
+   <!-- Main content -->
+   <main class="flex-1 flex flex-col p-6 max-w-full overflow-hidden">
+    <div class="mb-6">
+     <div class="text-xs uppercase opacity-50 font-semibold tracking-widest mb-1">
+      Multiplayer / Server Browser /
+     </div>
+     <h1 class="text-white font-extrabold text-2xl tracking-widest">
+      SERVER INFO
+     </h1>
+    </div>
+    <div class="flex space-x-12 mb-8 text-xs font-semibold tracking-widest opacity-80">
+     <div class="flex space-x-2">
+      <span>
+       3D SPOTTING
+      </span>
+      <span>
+       ON
+      </span>
+     </div>
+     <div class="flex space-x-2">
+      <span>
+       ENEMY NAME TAGS
+      </span>
+      <span>
+       ON
+      </span>
+     </div>
+    </div>
+    <div class="flex-1 overflow-hidden rounded-md border border-gray-700">
+     <div class="flex flex-col h-full overflow-hidden">
+      <div class="text-[9px] font-bold uppercase opacity-50 px-2 py-1 border-b border-gray-700 select-none">
+       MAP ROTATION
+      </div>
+      <div class="flex-1 overflow-y-auto scrollbar-thin pr-2">
+       <div class="grid grid-cols-4 gap-3 p-2">
+        <!-- 16 map cards repeated exactly as in screenshot -->
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Dawnbreaker map screenshot, urban cityscape with tall buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/d0bc33a6-fc13-4f60-ae57-292829507664.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          DAWNBREAKER
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Propaganda map screenshot, snowy urban environment with buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/5f356bb7-4c4f-41af-9afe-22241b4861d7.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          PROPAGANDA
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Operation Locker map screenshot, indoor corridor with warm lighting" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/ea9ed02c-2f08-40cf-5f62-34d40326cf44.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          OPERATION LOCKER
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Lancang Dam map screenshot, dam structure with concrete and sky" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/516a8544-b6c0-406b-0819-5a7c2ec10d72.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          LANCANG DAM
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Siege of Shanghai map screenshot, city skyline with tall buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/386e54d5-d880-4733-3a4f-0e6276430bbe.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          SIEGE OF SHANGHAI
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Golmud Railway map screenshot, railway tracks and mountainous terrain" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/2a7e7bcf-bad8-4190-a271-ec385b8c3e7b.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          GOLMUD RAILWAY
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Propaganda map screenshot, snowy urban environment with buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/5f356bb7-4c4f-41af-9afe-22241b4861d7.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          PROPAGANDA
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Siege of Shanghai map screenshot, city skyline with tall buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/386e54d5-d880-4733-3a4f-0e6276430bbe.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          SIEGE OF SHANGHAI
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Dawnbreaker map screenshot, urban cityscape with tall buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/d0bc33a6-fc13-4f60-ae57-292829507664.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          DAWNBREAKER
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Propaganda map screenshot, snowy urban environment with buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/5f356bb7-4c4f-41af-9afe-22241b4861d7.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          PROPAGANDA
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Operation Locker map screenshot, indoor corridor with warm lighting" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/ea9ed02c-2f08-40cf-5f62-34d40326cf44.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          OPERATION LOCKER
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Lancang Dam map screenshot, dam structure with concrete and sky" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/516a8544-b6c0-406b-0819-5a7c2ec10d72.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          LANCANG DAM
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Siege of Shanghai map screenshot, city skyline with tall buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/386e54d5-d880-4733-3a4f-0e6276430bbe.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          SIEGE OF SHANGHAI
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Golmud Railway map screenshot, railway tracks and mountainous terrain" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/2a7e7bcf-bad8-4190-a271-ec385b8c3e7b.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          GOLMUD RAILWAY
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Propaganda map screenshot, snowy urban environment with buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/5f356bb7-4c4f-41af-9afe-22241b4861d7.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          PROPAGANDA
+         </div>
+        </div>
+        <div class="bg-[#1a1a1a]">
+         <img alt="Conquest Large Siege of Shanghai map screenshot, city skyline with tall buildings" class="w-full h-20 object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/386e54d5-d880-4733-3a4f-0e6276430bbe.jpg" width="160"/>
+         <div class="text-[9px] font-bold uppercase px-2 py-1 leading-tight">
+          CONQUEST LARGE
+          <br/>
+          SIEGE OF SHANGHAI
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </main>
+   <!-- Right vertical user list -->
+   <aside class="flex flex-col items-center space-y-6 py-6 px-2 bg-transparent w-14 border-l border-gray-700">
+    <button class="text-white opacity-80 hover:opacity-100 transition">
+     <i class="fas fa-users fa-lg">
+     </i>
+    </button>
+    <button class="text-white opacity-80 hover:opacity-100 transition">
+     <i class="fas fa-plus fa-lg">
+     </i>
+    </button>
+    <div class="flex flex-col space-y-6 mt-4">
+     <img alt="User avatar A, pixel art style" class="rounded-sm cursor-pointer border-2 border-green-500" height="32" src="https://storage.googleapis.com/a1aa/image/65e98fed-38a6-45f8-46cb-7cb9f2445714.jpg" width="32"/>
+     <img alt="User avatar B, pixel art style" class="rounded-sm cursor-pointer opacity-50" height="32" src="https://storage.googleapis.com/a1aa/image/0630f785-62a4-4877-d203-f4216f306ee6.jpg" width="32"/>
+    </div>
+   </aside>
+  </div>
+ </body>
+</html>
